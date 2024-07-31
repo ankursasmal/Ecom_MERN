@@ -5,7 +5,7 @@ let auth=async(req,res,next)=>{
     try{
 let tokon=req.cookies.jwt ;
 // console.log(tokon);
-let verifiedUser= jwt.verify(tokon,process.env.SECRET_KEY);
+let verifiedUser= jwt.verify(tokon,'3y2yxhx829299292hc2rhh9h2rhcj9j2rj9r9rj92');
 // console.log(verifiedUser);
 let user=await Ecomuser.findOne({_id:verifiedUser._id});
  req.tokon=tokon;

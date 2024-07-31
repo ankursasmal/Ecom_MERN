@@ -88,7 +88,7 @@ route.post('/login',async(req,res)=>{
                 throw new Error('not login succes')
  }
             
-        let tokon= jwt.sign({_id:data._id},process.env.SECRET_KEY,{expiresIn:'30d'});
+        let tokon= jwt.sign({_id:data._id},'3y2yxhx829299292hc2rhh9h2rhcj9j2rj9r9rj92',{expiresIn:'30d'});
         //   console.log(tokon);
         res.cookie('jwt',tokon,{expiresIn:'3d',httpOnly:true,secure:true});
         return res.status(200).json({ message: 'Login successful', success: true });
