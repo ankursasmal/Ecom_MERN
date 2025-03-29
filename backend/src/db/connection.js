@@ -15,4 +15,4 @@ catch(e){
 } 
 }
 
-module.exports=connectionDB
+module.exports=connectionDB;
